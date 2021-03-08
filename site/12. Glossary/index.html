@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>12. Glossary - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../01.%20Introduction%20and%20Goals/" class="nav-link">01. Introduction and Goals</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../02.%20Architecture%20Constraints/" class="nav-link">02. Architecture Constraints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../03.%20Context%20and%20scope/" class="nav-link">03. Context and scope</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../04.%20Solution%20Strategy/" class="nav-link">04. Solution Strategy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../05.%20Building%20Block%20View/" class="nav-link">05. Building Block View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../06.%20Runtime%20View/" class="nav-link">06. Runtime View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../07.%20Deployment%20View/" class="nav-link">07. Deployment View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../08.%20Crosscutting%20Concepts/" class="nav-link">08. Crosscutting Concepts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../09.%20Architecture%20Decisions/" class="nav-link">09. Architecture Decisions</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../10.%20Quality%20Requirements/" class="nav-link">10. Quality Requirements</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../11.%20Risks%20and%20Technical%20Debt/" class="nav-link">11. Risks and Technical Debt</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">12. Glossary</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Adrs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../adrs/adr-000%20-%20ADR%20Template/" class="dropdown-item">[short title of solved problem and solution]</a>
+</li>
+                                    
+<li>
+    <a href="../adrs/adr-001%20-%20OpenId%20Connect%20Token%20Forwarding/" class="dropdown-item">OpenId Connect Token forwarding to embedded iFrame</a>
+</li>
+                                    
+<li>
+    <a href="../adrs/adr-002%20-%20Adding%20chat%20and%20attachment%20information%20to%20a%20new%20ticket/" class="dropdown-item">Adding chat and attachment information to a new ticket</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../11.%20Risks%20and%20Technical%20Debt/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../adrs/adr-000%20-%20ADR%20Template/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#glossary" class="nav-link">Glossary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="glossary">Glossary</h1>
+<p><strong>Contents.</strong></p>
+<p>The most important domain and technical terms that your stakeholders use
+when discussing the system.</p>
+<p>You can also see the glossary as source for translations if you work in
+multi-language teams.</p>
+<p><strong>Motivation.</strong></p>
+<p>You should clearly define your terms, so that all stakeholders</p>
+<ul>
+<li>
+<p>have an identical understanding of these terms</p>
+</li>
+<li>
+<p>do not use synonyms and homonyms</p>
+</li>
+</ul>
+<p><strong>Form.</strong></p>
+<p>A table with columns &lt;Term&gt; and &lt;Definition&gt;.</p>
+<p>Potentially more columns in case you need translations.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Term 1</td>
+<td>&lt;definition-1&gt;</td>
+</tr>
+<tr>
+<td>Term 2</td>
+<td>&lt;definition-2&gt;</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

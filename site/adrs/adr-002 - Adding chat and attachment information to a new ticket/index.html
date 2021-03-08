@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Adding chat and attachment information to a new ticket - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../01.%20Introduction%20and%20Goals/" class="nav-link">01. Introduction and Goals</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../02.%20Architecture%20Constraints/" class="nav-link">02. Architecture Constraints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../03.%20Context%20and%20scope/" class="nav-link">03. Context and scope</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../04.%20Solution%20Strategy/" class="nav-link">04. Solution Strategy</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../05.%20Building%20Block%20View/" class="nav-link">05. Building Block View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../06.%20Runtime%20View/" class="nav-link">06. Runtime View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../07.%20Deployment%20View/" class="nav-link">07. Deployment View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../08.%20Crosscutting%20Concepts/" class="nav-link">08. Crosscutting Concepts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../09.%20Architecture%20Decisions/" class="nav-link">09. Architecture Decisions</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../10.%20Quality%20Requirements/" class="nav-link">10. Quality Requirements</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../11.%20Risks%20and%20Technical%20Debt/" class="nav-link">11. Risks and Technical Debt</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../12.%20Glossary/" class="nav-link">12. Glossary</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Adrs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../adr-000%20-%20ADR%20Template/" class="dropdown-item">[short title of solved problem and solution]</a>
+</li>
+                                    
+<li>
+    <a href="../adr-001%20-%20OpenId%20Connect%20Token%20Forwarding/" class="dropdown-item">OpenId Connect Token forwarding to embedded iFrame</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Adding chat and attachment information to a new ticket</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../adr-001%20-%20OpenId%20Connect%20Token%20Forwarding/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p># Adding chat and attachment information to a new ticket</p>
+<ul>
+<li>Status: accepted</li>
+<li>Deciders: Christian Schulz, Ömer Yildiz, Victor Mosin, Marc Schmidt, Nima Hamidian, Philip Koep, Jens Schmitz, Marius Schulze</li>
+<li>Date: 2020-10-06</li>
+</ul>
+<p>Technical Story: https://tfs.pmcs-helpline.com/tfs/Helpline/HelpLineScrum/_workitems/edit/202886</p>
+<p>## Context and Problem Statement  </p>
+<p>When the agent creates a new ticket out of a chat, how is the chat added to the new ticket? Will it be visible to the agent or will it be added on the server-side?</p>
+<p>## Decision Drivers  </p>
+<ul>
+<li>The chat content and especially the attachments can have a decent storage size. When integrated on the client it will need data volume to transfer them from the messaging backend to the processes client to send it to the processes backend.</li>
+</ul>
+<p>## Considered Options  </p>
+<p>#### Option 1 
+   Client-side integration (Message Bus)</p>
+<p>#### Option 2 <br />
+   Client-side integration (API call)</p>
+<p>#### Option 3 <br />
+   Server-side integration     </p>
+<p>## Decision Outcome  </p>
+<p>Chosen option: <a href="#option-3">Option 3</a>, because large content doesn't need to be transferred to the client but is queried via server-server communication. </p>
+<p>## Pros and Cons of the Options  </p>
+<p>### <a href="#option-1">Option 1</a>  </p>
+<p>The messaging component receives the chat content and attachments from the embedded iframe via event-based communication. It will display the chat inside the first multiline text field and the attachments are added to the first attachment control. </p>
+<ul>
+<li>Good, because the agent can see and modify the chat content when creating a ticket.       </li>
+<li>Bad, because lots of data has to be transferred via events which might not be the intended use case.</li>
+<li>Bad, because a lot of data volume would be consumed.</li>
+</ul>
+<p>### <a href="#option-2">Option 2</a>  </p>
+<p>The chat content and attachments are loaded via an API from the messaging backend instead of an event-based communication.</p>
+<ul>
+<li>Good, because the agent can see and modify the chat content when creating a ticket.</li>
+<li>Good, because an API call is better for loading data from the backend than passing it via events.   </li>
+<li>Bad, because a lot of data volume would be consumed.   </li>
+</ul>
+<p>### <a href="#option-3">Option 3</a>  </p>
+<p>The chat content and the attachments are exchanged between the processes server and messaging server. The client only displays information that the chat and attachments will be added to the ticket automatically. The POWA client receives the current chat ID from the iframe. The processes server queries the needed content from the messaging server. The attachments could be added only via a link so there is no data duplication. This needs to be decided in another ADR. </p>
+<ul>
+<li>Good, because the client doesn't need to handle large data. </li>
+<li>Good, because server-to-server communication would be done asynchronous so the agent doesn't have to wait for the data to be loaded.</li>
+<li>Bad, because the agent doesn't see the chat in the popup dialog.     </li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

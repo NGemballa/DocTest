@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>05. Building Block View - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../01.%20Introduction%20and%20Goals/" class="nav-link">01. Introduction and Goals</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../02.%20Architecture%20Constraints/" class="nav-link">02. Architecture Constraints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../03.%20Context%20and%20scope/" class="nav-link">03. Context and scope</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../04.%20Solution%20Strategy/" class="nav-link">04. Solution Strategy</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">05. Building Block View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../06.%20Runtime%20View/" class="nav-link">06. Runtime View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../07.%20Deployment%20View/" class="nav-link">07. Deployment View</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../08.%20Crosscutting%20Concepts/" class="nav-link">08. Crosscutting Concepts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../09.%20Architecture%20Decisions/" class="nav-link">09. Architecture Decisions</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../10.%20Quality%20Requirements/" class="nav-link">10. Quality Requirements</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../11.%20Risks%20and%20Technical%20Debt/" class="nav-link">11. Risks and Technical Debt</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../12.%20Glossary/" class="nav-link">12. Glossary</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Adrs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../adrs/adr-000%20-%20ADR%20Template/" class="dropdown-item">[short title of solved problem and solution]</a>
+</li>
+                                    
+<li>
+    <a href="../adrs/adr-001%20-%20OpenId%20Connect%20Token%20Forwarding/" class="dropdown-item">OpenId Connect Token forwarding to embedded iFrame</a>
+</li>
+                                    
+<li>
+    <a href="../adrs/adr-002%20-%20Adding%20chat%20and%20attachment%20information%20to%20a%20new%20ticket/" class="dropdown-item">Adding chat and attachment information to a new ticket</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../04.%20Solution%20Strategy/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../06.%20Runtime%20View/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#building-block-view" class="nav-link">Building Block View</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#whitebox-overall-system" class="nav-link">Whitebox Overall System</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#level-2" class="nav-link">Level 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#level-3" class="nav-link">Level 3</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="building-block-view">Building Block View</h1>
+<p><strong>Content.</strong></p>
+<p>The building block view shows the static decomposition of the system
+into building blocks (modules, components, subsystems, classes,
+interfaces, packages, libraries, frameworks, layers, partitions, tiers,
+functions, macros, operations, datas structures, …) as well as their
+dependencies (relationships, associations, …)</p>
+<p>This view is mandatory for every architecture documentation. In analogy
+to a house this is the <em>floor plan</em>.</p>
+<p><strong>Motivation.</strong></p>
+<p>Maintain an overview of your source code by making its structure
+understandable through abstraction.</p>
+<p>This allows you to communicate with your stakeholder on an abstract
+level without disclosing implementation details.</p>
+<p><strong>Form.</strong></p>
+<p>The building block view is a hierarchical collection of black boxes and
+white boxes (see figure below) and their descriptions.</p>
+<p><img alt="Hierarchy of building blocks" src="../images/05_building_blocks-EN.png" /></p>
+<p><strong>Level 1</strong> is the white box description of the overall system together
+with black box descriptions of all contained building blocks.</p>
+<p><strong>Level 2</strong> zooms into some building blocks of level 1. Thus it contains
+the white box description of selected building blocks of level 1,
+together with black box descriptions of their internal building blocks.</p>
+<p><strong>Level 3</strong> zooms into selected building blocks of level 2, and so on.</p>
+<h2 id="whitebox-overall-system">Whitebox Overall System</h2>
+<p>Here you describe the decomposition of the overall system using the
+following white box template. It contains</p>
+<ul>
+<li>
+<p>an overview diagram</p>
+</li>
+<li>
+<p>a motivation for the decomposition</p>
+</li>
+<li>
+<p>black box descriptions of the contained building blocks. For these
+    we offer you alternatives:</p>
+<ul>
+<li>
+<p>use <em>one</em> table for a short and pragmatic overview of all
+    contained building blocks and their interfaces</p>
+</li>
+<li>
+<p>use a list of black box descriptions of the building blocks
+    according to the black box template (see below). Depending on
+    your choice of tool this list could be sub-chapters (in text
+    files), sub-pages (in a Wiki) or nested elements (in a modeling
+    tool).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>(optional:) important interfaces, that are not explained in the
+    black box templates of a building block, but are very important for
+    understanding the white box. Since there are so many ways to specify
+    interfaces why do not provide a specific template for them. In the
+    worst case you have to specify and describe syntax, semantics,
+    protocols, error handling, restrictions, versions, qualities,
+    necessary compatibilities and many things more. In the best case you
+    will get away with examples or simple signatures.</p>
+</li>
+</ul>
+<p><strong><em>&lt;Overview Diagram&gt;</em></strong></p>
+<p>Motivation</p>
+<p>:   <em>&lt;text explanation&gt;</em></p>
+<p>Contained Building Blocks</p>
+<p>:   <em>&lt;Description of contained building block (black boxes)&gt;</em></p>
+<p>Important Interfaces</p>
+<p>:   <em>&lt;Description of important interfaces&gt;</em></p>
+<p>Insert your explanations of black boxes from level 1:</p>
+<p>If you use tabular form you will only describe your black boxes with
+name and responsibility according to the following schema:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Responsibility</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black Box 1</td>
+<td> <em>&lt;Text&gt;</em></td>
+</tr>
+<tr>
+<td>Black Box 2</td>
+<td> <em>&lt;Text&gt;</em></td>
+</tr>
+</tbody>
+</table>
+<p>If you use a list of black box descriptions then you fill in a separate
+black box template for every important building block . Its headline is
+the name of the black box.</p>
+<h3 id="name-black-box-1">&lt;Name black box 1&gt;</h3>
+<p>Here you describe &lt;black box 1&gt; according the the following black
+box template:</p>
+<ul>
+<li>
+<p>Purpose/Responsibility</p>
+</li>
+<li>
+<p>Interface(s), when they are not extracted as separate paragraphs.
+    This interfaces may include qualities and performance
+    characteristics.</p>
+</li>
+<li>
+<p>(Optional) Quality-/Performance characteristics of the black box,
+    e.g.availability, run time behavior, ….</p>
+</li>
+<li>
+<p>(Optional) directory/file location</p>
+</li>
+<li>
+<p>(Optional) Fulfilled requirements (if you need traceability to
+    requirements).</p>
+</li>
+<li>
+<p>(Optional) Open issues/problems/risks</p>
+</li>
+</ul>
+<p><em>&lt;Purpose/Responsibility&gt;</em></p>
+<p><em>&lt;Interface(s)&gt;</em></p>
+<p><em>&lt;(Optional) Quality/Performance Characteristics&gt;</em></p>
+<p><em>&lt;(Optional) Directory/File Location&gt;</em></p>
+<p><em>&lt;(Optional) Fulfilled Requirements&gt;</em></p>
+<p><em>&lt;(optional) Open Issues/Problems/Risks&gt;</em></p>
+<h3 id="name-black-box-2">&lt;Name black box 2&gt;</h3>
+<p><em>&lt;black box template&gt;</em></p>
+<h3 id="name-black-box-n">&lt;Name black box n&gt;</h3>
+<p><em>&lt;black box template&gt;</em></p>
+<h3 id="name-interface-1">&lt;Name interface 1&gt;</h3>
+<p>…</p>
+<h3 id="name-interface-m">&lt;Name interface m&gt;</h3>
+<h2 id="level-2">Level 2</h2>
+<p>Here you can specify the inner structure of (some) building blocks from
+level 1 as white boxes.</p>
+<p>You have to decide which building blocks of your system are important
+enough to justify such a detailed description. Please prefer relevance
+over completeness. Specify important, surprising, risky, complex or
+volatile building blocks. Leave out normal, simple, boring or
+standardized parts of your system</p>
+<h3 id="white-box-building-block-1">White Box <em>&lt;building block 1&gt;</em></h3>
+<p>…describes the internal structure of <em>building block 1</em>.</p>
+<p><em>&lt;white box template&gt;</em></p>
+<h3 id="white-box-building-block-2">White Box <em>&lt;building block 2&gt;</em></h3>
+<p><em>&lt;white box template&gt;</em></p>
+<p>…</p>
+<h3 id="white-box-building-block-m">White Box <em>&lt;building block m&gt;</em></h3>
+<p><em>&lt;white box template&gt;</em></p>
+<h2 id="level-3">Level 3</h2>
+<p>Here you can specify the inner structure of (some) building blocks from
+level 2 as white boxes.</p>
+<p>When you need more detailed levels of your architecture please copy this
+part of arc42 for additional levels.</p>
+<h3 id="white-box-_building-block-x1_">White Box &lt;_building block x.1_&gt;</h3>
+<p>Specifies the internal structure of <em>building block x.1</em>.</p>
+<p><em>&lt;white box template&gt;</em></p>
+<h3 id="white-box-_building-block-x2_">White Box &lt;_building block x.2_&gt;</h3>
+<p><em>&lt;white box template&gt;</em></p>
+<h3 id="white-box-_building-block-y1_">White Box &lt;_building block y.1_&gt;</h3>
+<p><em>&lt;white box template&gt;</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

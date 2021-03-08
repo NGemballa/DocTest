@@ -1,0 +1,21 @@
+@startuml 03. Technical Context
+caption Technical Context
+
+skinparam componentStyle uml2
+
+frame "Technical Context" {
+    rectangle "POWA" <<customer system>> {
+        rectangle "Reading Pane" as r
+        component "Messaging UI" as mu <<iframe>>
+    }
+
+    cloud "Public Cloud" {
+        rectangle "Messaging Backend" as mb
+    }
+
+    mb . mu: Internet (https)
+
+    mu . r: Event based\n Communication
+}
+
+@enduml
