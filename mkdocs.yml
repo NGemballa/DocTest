@@ -1,0 +1,7 @@
+site_name: My Docs
+nav:
+  - Home: index.md, NMReadme.md
+  - NM Readme: NMReadme.md
+  - Messaging Integration: 
+    - Introduction & Goals: 01. Introduction and Goals.md
+    - Glossary: 12. Glossary.md
