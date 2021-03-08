@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Workflow design - Serviceware ESP online manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Workflow design";
+    var mkdocs_page_input_path = "Processes_WFDesign.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Serviceware ESP online manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Authenticator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Authenticator_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Financial</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Financial_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Knowledge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Knowledge_CreateArticle.md">Create an article</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Messaging</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Messaging_Topic1/">Introduction & Goals</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Messaging_Topic2/">Glossary</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Notifications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Notifications_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Performance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Performance_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Processes</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../Processes_Installation/">Installation</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Workflow design</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vision">Vision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#requirements-overview">Requirements Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#why">Why</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how">How</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what">What</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quality-goals">Quality Goals</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stakeholders">Stakeholders</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Resources_Installation.md">Installation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Serviceware ESP online manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Processes &raquo;</li>
+        
+      
+    
+    <li>Workflow design</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction-and-goals">Introduction and Goals</h1>
+<h2 id="vision">Vision</h2>
+<pre><code>&quot;Enable direct communication between users and agents for an improved service satisfaction&quot;
+</code></pre>
+<hr />
+<h2 id="requirements-overview">Requirements Overview</h2>
+<h3 id="why">Why</h3>
+<ul>
+<li>Improve user satisfaction by enabling them to receive quick solutions for their problems</li>
+<li>Reduce the effort to create a new ticket for a customer / gather all required information to solve a ticket</li>
+</ul>
+<h3 id="how">How</h3>
+<ul>
+<li>Reusing existing functionality to quickly create new processes</li>
+<li>Including in new POWA client</li>
+</ul>
+<h3 id="what">What</h3>
+<ul>
+<li>Integrate Messaging (former Smoope) into Processes</li>
+</ul>
+<hr />
+<h2 id="quality-goals">Quality Goals</h2>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Quality Goal</th>
+<th>Scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Configurability</td>
+<td>It should be easy to install and configure Messaging for/on customer environments</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Monitoring</td>
+<td>The integration should provide logging and monitoring mechanism based on the "Book of play"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="stakeholders">Stakeholders</h2>
+<table>
+<thead>
+<tr>
+<th>Role/Name</th>
+<th>Contact</th>
+<th>Expectations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Owner</td>
+<td>Halil Mandal</td>
+<td>Messaging is completely integrated in Processes and provides added value</td>
+</tr>
+<tr>
+<td>Platform Integration Manager</td>
+<td>Christian Pesch</td>
+<td>The integration should be aligned with the platform aspirations and the Book of Play</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Processes_Installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Processes_Installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

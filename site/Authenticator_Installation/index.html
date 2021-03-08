@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Installation - Serviceware ESP online manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installation";
+    var mkdocs_page_input_path = "Authenticator_Installation.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Serviceware ESP online manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Authenticator</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#whitebox-overall-system">Whitebox Overall System</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#name-black-box-1">&lt;Name black box 1&gt;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#name-black-box-2">&lt;Name black box 2&gt;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#name-black-box-n">&lt;Name black box n&gt;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#name-interface-1">&lt;Name interface 1&gt;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#name-interface-m">&lt;Name interface m&gt;</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#level-2">Level 2</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#white-box-building-block-1">White Box &lt;building block 1&gt;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#white-box-building-block-2">White Box &lt;building block 2&gt;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#white-box-building-block-m">White Box &lt;building block m&gt;</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#level-3">Level 3</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#white-box-_building-block-x1_">White Box &lt;_building block x.1_&gt;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#white-box-_building-block-x2_">White Box &lt;_building block x.2_&gt;</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#white-box-_building-block-y1_">White Box &lt;_building block y.1_&gt;</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Financial</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Financial_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Knowledge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Knowledge_CreateArticle.md">Create an article</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Messaging</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Messaging_Topic1/">Introduction & Goals</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Messaging_Topic2/">Glossary</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Notifications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Notifications_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Performance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Performance_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Processes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Processes_Installation/">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Processes_WFDesign/">Workflow design</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Resources_Installation.md">Installation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Serviceware ESP online manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Authenticator &raquo;</li>
+        
+      
+    
+    <li>Installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="building-block-view">Building Block View</h1>
+<p><strong>Content.</strong></p>
+<p>The building block view shows the static decomposition of the system
+into building blocks (modules, components, subsystems, classes,
+interfaces, packages, libraries, frameworks, layers, partitions, tiers,
+functions, macros, operations, datas structures, …) as well as their
+dependencies (relationships, associations, …)</p>
+<p>This view is mandatory for every architecture documentation. In analogy
+to a house this is the <em>floor plan</em>.</p>
+<p><strong>Motivation.</strong></p>
+<p>Maintain an overview of your source code by making its structure
+understandable through abstraction.</p>
+<p>This allows you to communicate with your stakeholder on an abstract
+level without disclosing implementation details.</p>
+<p><strong>Form.</strong></p>
+<p>The building block view is a hierarchical collection of black boxes and
+white boxes (see figure below) and their descriptions.</p>
+<p><img alt="Hierarchy of building blocks" src="../images/05_building_blocks-EN.png" /></p>
+<p><strong>Level 1</strong> is the white box description of the overall system together
+with black box descriptions of all contained building blocks.</p>
+<p><strong>Level 2</strong> zooms into some building blocks of level 1. Thus it contains
+the white box description of selected building blocks of level 1,
+together with black box descriptions of their internal building blocks.</p>
+<p><strong>Level 3</strong> zooms into selected building blocks of level 2, and so on.</p>
+<h2 id="whitebox-overall-system">Whitebox Overall System</h2>
+<p>Here you describe the decomposition of the overall system using the
+following white box template. It contains</p>
+<ul>
+<li>
+<p>an overview diagram</p>
+</li>
+<li>
+<p>a motivation for the decomposition</p>
+</li>
+<li>
+<p>black box descriptions of the contained building blocks. For these
+    we offer you alternatives:</p>
+<ul>
+<li>
+<p>use <em>one</em> table for a short and pragmatic overview of all
+    contained building blocks and their interfaces</p>
+</li>
+<li>
+<p>use a list of black box descriptions of the building blocks
+    according to the black box template (see below). Depending on
+    your choice of tool this list could be sub-chapters (in text
+    files), sub-pages (in a Wiki) or nested elements (in a modeling
+    tool).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>(optional:) important interfaces, that are not explained in the
+    black box templates of a building block, but are very important for
+    understanding the white box. Since there are so many ways to specify
+    interfaces why do not provide a specific template for them. In the
+    worst case you have to specify and describe syntax, semantics,
+    protocols, error handling, restrictions, versions, qualities,
+    necessary compatibilities and many things more. In the best case you
+    will get away with examples or simple signatures.</p>
+</li>
+</ul>
+<p><strong><em>&lt;Overview Diagram&gt;</em></strong></p>
+<p>Motivation</p>
+<p>:   <em>&lt;text explanation&gt;</em></p>
+<p>Contained Building Blocks</p>
+<p>:   <em>&lt;Description of contained building block (black boxes)&gt;</em></p>
+<p>Important Interfaces</p>
+<p>:   <em>&lt;Description of important interfaces&gt;</em></p>
+<p>Insert your explanations of black boxes from level 1:</p>
+<p>If you use tabular form you will only describe your black boxes with
+name and responsibility according to the following schema:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Responsibility</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black Box 1</td>
+<td> <em>&lt;Text&gt;</em></td>
+</tr>
+<tr>
+<td>Black Box 2</td>
+<td> <em>&lt;Text&gt;</em></td>
+</tr>
+</tbody>
+</table>
+<p>If you use a list of black box descriptions then you fill in a separate
+black box template for every important building block . Its headline is
+the name of the black box.</p>
+<h3 id="name-black-box-1">&lt;Name black box 1&gt;</h3>
+<p>Here you describe &lt;black box 1&gt; according the the following black
+box template:</p>
+<ul>
+<li>
+<p>Purpose/Responsibility</p>
+</li>
+<li>
+<p>Interface(s), when they are not extracted as separate paragraphs.
+    This interfaces may include qualities and performance
+    characteristics.</p>
+</li>
+<li>
+<p>(Optional) Quality-/Performance characteristics of the black box,
+    e.g.availability, run time behavior, ….</p>
+</li>
+<li>
+<p>(Optional) directory/file location</p>
+</li>
+<li>
+<p>(Optional) Fulfilled requirements (if you need traceability to
+    requirements).</p>
+</li>
+<li>
+<p>(Optional) Open issues/problems/risks</p>
+</li>
+</ul>
+<p><em>&lt;Purpose/Responsibility&gt;</em></p>
+<p><em>&lt;Interface(s)&gt;</em></p>
+<p><em>&lt;(Optional) Quality/Performance Characteristics&gt;</em></p>
+<p><em>&lt;(Optional) Directory/File Location&gt;</em></p>
+<p><em>&lt;(Optional) Fulfilled Requirements&gt;</em></p>
+<p><em>&lt;(optional) Open Issues/Problems/Risks&gt;</em></p>
+<h3 id="name-black-box-2">&lt;Name black box 2&gt;</h3>
+<p><em>&lt;black box template&gt;</em></p>
+<h3 id="name-black-box-n">&lt;Name black box n&gt;</h3>
+<p><em>&lt;black box template&gt;</em></p>
+<h3 id="name-interface-1">&lt;Name interface 1&gt;</h3>
+<p>…</p>
+<h3 id="name-interface-m">&lt;Name interface m&gt;</h3>
+<h2 id="level-2">Level 2</h2>
+<p>Here you can specify the inner structure of (some) building blocks from
+level 1 as white boxes.</p>
+<p>You have to decide which building blocks of your system are important
+enough to justify such a detailed description. Please prefer relevance
+over completeness. Specify important, surprising, risky, complex or
+volatile building blocks. Leave out normal, simple, boring or
+standardized parts of your system</p>
+<h3 id="white-box-building-block-1">White Box <em>&lt;building block 1&gt;</em></h3>
+<p>…describes the internal structure of <em>building block 1</em>.</p>
+<p><em>&lt;white box template&gt;</em></p>
+<h3 id="white-box-building-block-2">White Box <em>&lt;building block 2&gt;</em></h3>
+<p><em>&lt;white box template&gt;</em></p>
+<p>…</p>
+<h3 id="white-box-building-block-m">White Box <em>&lt;building block m&gt;</em></h3>
+<p><em>&lt;white box template&gt;</em></p>
+<h2 id="level-3">Level 3</h2>
+<p>Here you can specify the inner structure of (some) building blocks from
+level 2 as white boxes.</p>
+<p>When you need more detailed levels of your architecture please copy this
+part of arc42 for additional levels.</p>
+<h3 id="white-box-_building-block-x1_">White Box &lt;_building block x.1_&gt;</h3>
+<p>Specifies the internal structure of <em>building block x.1</em>.</p>
+<p><em>&lt;white box template&gt;</em></p>
+<h3 id="white-box-_building-block-x2_">White Box &lt;_building block x.2_&gt;</h3>
+<p><em>&lt;white box template&gt;</em></p>
+<h3 id="white-box-_building-block-y1_">White Box &lt;_building block y.1_&gt;</h3>
+<p><em>&lt;white box template&gt;</em></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Messaging_Topic1/" class="btn btn-neutral float-right" title="Introduction & Goals">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Messaging_Topic1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

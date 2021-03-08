@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Installation - Serviceware ESP online manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installation";
+    var mkdocs_page_input_path = "Processes_Installation.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Serviceware ESP online manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Authenticator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Authenticator_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Financial</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Financial_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Knowledge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Knowledge_CreateArticle.md">Create an article</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Messaging</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Messaging_Topic1/">Introduction & Goals</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Messaging_Topic2/">Glossary</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Notifications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Notifications_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Performance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Performance_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Processes</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vision">Vision 🚀</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo">Demo ✨</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started 🐱‍🏍</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#client">Client 📖</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-access-the-artifacts-feed">1. Access the artifacts feed 🎁</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-include-the-package">2. Include the package 📦</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-use-it">3. Use it 🎉</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#microsoft-internet-explorer-support">Microsoft Internet Explorer Support</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#server">Server 📡</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-get-the-binaries">1. Get the binaries 🧾</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-setup-the-server">2. Setup the server 💻</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-access-the-swagger-ui">3. Access the Swagger UI 📊</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-send-events">4. Send events 🪁</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#architecture-documentation">Architecture Documentation 📚</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#responsible-team">Responsible Team 👩🏼‍🚀</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Processes_WFDesign/">Workflow design</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../Resources_Installation.md">Installation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Serviceware ESP online manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Processes &raquo;</li>
+        
+      
+    
+    <li>Installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="notification-module">Notification Module</h1>
+<p><a href="https://tfs.pmcs-helpline.com/tfs/Helpline/Common/_build/latest?definitionId=944"><img alt="Build status" src="https://tfs.pmcs-helpline.com/tfs/Helpline/Common/_apis/build/status/NotificationModule" /></a> <a href="https://tfs.pmcs-helpline.com/tfs/Helpline/Common/_packaging?_a=package&amp;feed=d5fbb08a-6bc6-47a4-9397-710bb9ab2537&amp;package=3d012c14-6c30-4828-a5df-95c595a8757b&amp;preferRelease=true"><img alt="@sw/notificationmodule package in sw feed in Azure Artifacts" src="https://tfs.pmcs-helpline.com/tfs/Helpline/_apis/public/Packaging/Feeds/d5fbb08a-6bc6-47a4-9397-710bb9ab2537/Packages/3d012c14-6c30-4828-a5df-95c595a8757b/Badge" /></a></p>
+<h2 id="vision">Vision 🚀</h2>
+<pre><code>“Provide our users with reliable and unified notifications about relevant events within the enterprise service platform”​
+</code></pre>
+<h2 id="demo">Demo ✨</h2>
+<p>You can find a demo page <a href="https://notification-demo-ui.labs.sabio.de/">here</a>.</p>
+<p>Credentials:</p>
+<p><em>Username: Patrick</em></p>
+<p><em>Password: password</em></p>
+<p>You can also quickly setup your own quick demo for any version of the Notification Module in Maestro <a href="https://maestro.labs.sabio.de/">here</a>.</p>
+<h2 id="getting-started">Getting Started 🐱‍🏍</h2>
+<h3 id="client">Client 📖</h3>
+<h4 id="1-access-the-artifacts-feed">1. Access the artifacts feed 🎁</h4>
+<p><strong>@notificationmodule/client</strong> is a private library. To download it you need to add a <em>.nprmc</em> file with the NPM credentials.</p>
+<p>You can generate the credentials on the <a href="https://tfs.pmcs-helpline.com/tfs/Helpline/Common/_packaging?_a=feed&amp;feed=sw">TFS feed</a>.</p>
+<p><em>your-project/.npmrc</em></p>
+<pre><code>@notificationmodule:registry=https://tfs.pmcs-helpline.com/tfs/Helpline/_packaging/sw/npm/registry/
+always-auth=true
+
+HERE THE NPM CREDENTIALS
+</code></pre>
+<h4 id="2-include-the-package">2. Include the package 📦</h4>
+<p>To include the Notification Module execute the following command in your project directory:</p>
+<pre><code>yarn add @sw/notificationmodule@^1
+</code></pre>
+<p>Make sure to load the mandatory file e.g. for angular in the angular.json:</p>
+<pre><code class="language-json">&quot;scripts&quot;: [
+    &quot;node_modules/@sw/notificationmodule/dist/elements/notification-module.js&quot;
+],
+&quot;styles&quot;: [
+    &quot;node_modules/@sw/notificationmodule/dist/elements/notification-module.css&quot;    
+]
+</code></pre>
+<p>If your application is not using the <a href="https://code-blue-controls-library.labs.sabio.de/home">SW control library</a> you also must include the mandatory style file e.g. for angular in the angular.json:</p>
+<pre><code class="language-json">&quot;styles&quot;: [
+    &quot;node_modules/@sw/notificationmodule/dist/elements/sw-angular-controls.css&quot;    
+]
+</code></pre>
+<p>Add this polyfill to your polyfill.ts</p>
+<pre><code class="language-js">// Used for browsers with partially native support of Custom Elements
+import '@webcomponents/custom-elements/src/native-shim';
+</code></pre>
+<h4 id="3-use-it">3. Use it 🎉</h4>
+<p>When using it inside an Angular application you can use it in HTML file like this:</p>
+<pre><code class="language-html">&lt;sw-notification-module [attr.service-url]=&quot;'THE_URL_TO_THE_NOTIFICATION_MODULE_SERVER'&quot;
+                        [attr.lang]=&quot;'THE_LANGUAGE_OF_THE_USER'&quot;
+                        [attr.id-token]=&quot;'THE_OPENIDCONNECT_ID_TOKEN'&quot;
+                        [attr.user-id]=&quot;'THE_USER_IDENTIFIER'&quot;&gt;&lt;/sw-notification-module&gt;
+</code></pre>
+<p>When using it in e.g. a plain web application you can also use it like this:</p>
+<pre><code class="language-html">&lt;sw-notification-module&gt;&lt;/sw-notification-module&gt;
+</code></pre>
+<pre><code class="language-js">const element = document.querySelector('sw-notification-module');
+element.setAttribute('service-url', 'THE_URL_TO_THE_NOTIFICATION_MODULE_SERVER');
+element.setAttribute('lang', 'THE_LANGUAGE_OF_THE_USER');
+element.setAttribute('id-token', 'THE_OPENIDCONNECT_ID_TOKEN');
+element.setAttribute('user-id', 'THE_USER_IDENTIFIER');
+</code></pre>
+<h4 id="microsoft-internet-explorer-support">Microsoft Internet Explorer Support</h4>
+<p>If you need to support Microsoft Internet Explorer, make sure to install these dependencies:</p>
+<pre><code class="language-json">&quot;dependencies&quot;: {
+    ...    
+    &quot;core-js&quot;: &quot;3.3.3&quot;,
+    &quot;custom-event-polyfill&quot;: &quot;1.0.7&quot;,
+    &quot;ie11-custom-properties&quot;: &quot;3.0.6&quot;,
+    ...
+}
+</code></pre>
+<p>and import them in your polyfill.ts</p>
+<pre><code class="language-js">// Used for browsers without a native support of Custom Elements
+import '@webcomponents/custom-elements/custom-elements.min';
+
+// IE 11 Support
+import 'core-js';
+import 'custom-event-polyfill';
+import 'ie11-custom-properties';
+</code></pre>
+<p>In case you encounter a zone.js SecurityError in the console of Microsoft Internet Explorer, follow these steps to solve it:
+https://github.com/angular/zone.js/issues/1001</p>
+<p>Features for the Notification Module that are not supported in Microsoft Internet Explorer:
+- Desktop Notifications</p>
+<h3 id="server">Server 📡</h3>
+<h4 id="1-get-the-binaries">1. Get the binaries 🧾</h4>
+<p>You can get the latest binaries by executing the following command in the directory you want to copy them:</p>
+<pre><code>\\lab-build01\ArtifactRepository\.cli\buildcli.cmd get -p NotificationModule.Deployment -n -s &quot;https://tfs.pmcs-helpline.com/tfs/Helpline/Common/_git/NotificationModule&quot;
+</code></pre>
+<p>Optionally you can also specify to just get the binaries for a specific runtime by appending <code>-f Deployment/&lt;RuntimeIdentifier&gt;</code> to the command.
+Available runtimes are:
+| Identifier | Description        |
+| ---------- | ------------------ |
+| win-arm    | Windows on ARM     |
+| win-x64    | Windows x86 64-Bit |
+| linux-arm  | Linux ARM          |
+| linux-x64  | Linux x64 64-Bit   |</p>
+<h4 id="2-setup-the-server">2. Setup the server 💻</h4>
+<p>After getting the binaries you can find the setup script to install the Notification Module in the folder Deployment/&lt;RuntimeIdentifier&gt;. For Windows Deployments you can find a "setup.cmd" and for Linux a "setup<span></span>.sh" script.</p>
+<p>You can pass in the following arguments for both <code>install</code> and <code>uninstall</code> commands:
+| Argument            | Description                                                                                                                             |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| <code>-s</code> | <code>--silent</code>  | Runs the setup without any user interaction.                                                                                            |
+| <code>-f</code> | <code>--force</code>   | Ignores checks for the Installation location. WARNING: On uninstall this will remove all files in the installation path without asking! |
+| <code>--verbose</code>         | Enables verbose logging to the console/terminal.                                                                                        |
+| <code>--log false</code>       | Disable logging to a file.                                                                                                              |
+| <code>--log-path &lt;path&gt;</code> | The path to the log file that is created by the setup.                                                                                  |
+| <code>--help</code>            | Display information about a specific Verb.                                                                                              |
+| <code>--version</code>         | Display version information.                                                                                                            |</p>
+<h5 id="install">Install</h5>
+<p>If you want to install the Notification Module by using a Wizard-like experience, just execute the script with the argument <code>install</code> and the setup will ask you all information it needs.</p>
+<p>You can also specify all the information, if you want to run the setup automatically using the <code>--silent</code> switch, with the following arguments:
+| Argument                         | Description                                                                                                                                                         |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <code>-p</code> | <code>--path</code>                 | The path to which the Notification Module should be installed to. This path should be a non-existant or empty directory.                                            |
+| <code>-T</code> | <code>--db-type</code>              | The database engine to use. Can be one of the following values: MSSql, Postgresql.                                                                                  |
+| <code>-d</code> | <code>--db-connection-string</code> | The connection string to the Notification Module database.                                                                                                          |
+| <code>--db-server</code>                    | The database server of the Notification Module database.                                                                                                            |
+| <code>--db-name</code>                      | The database name of the Notification Module database.                                                                                                              |
+| <code>--db-user</code>                      | The user id that should be used to connect to the Notification Module database.                                                                                     |
+| <code>--db-password</code>                  | The password that should be used to connect to the Notification Module database.                                                                                    |
+| <code>--db-port</code>                      | The port of the database server of the Notification Module database.                                                                                                |
+| <code>--db-schema</code>                    | The database schema to use for the Notification Module database.                                                                                                    |
+| <code>--skip-db-migration</code>            | Skips the database creation/migration.                                                                                                                              |
+| <code>--https-port</code>                   | The port for https protocol.                                                                                                                                        |
+| <code>--certificate-pfx-path</code>         | The pfx file path of the certificate for the https port.                                                                                                            |
+| <code>--certificate-pfx-password</code>     | The pfx file password of the certificate for the https port.                                                                                                        |
+| <code>-u</code> | <code>--service-user</code>         | The user under which the service should run.                                                                                                                        |
+| <code>--oidc-authority</code>               | The url for the authority of the OpenIDConnect server instance instance.                                                                                            |
+| <code>--oidc-audience</code>                | The client audience to use.                                                                                                                                         |
+| <code>--oidc-claim-type</code>              | The claim that should be used to retrieve a unique user identifier from the OpenIDConnect token                                                                     |
+| <code>--authorized-systems</code>           | The names and secrets of system that are authrized to use notification module.Multiple values can be provided (e.g. --authorized-systems sys1:secret1 sys2:secret2) |
+| <code>--allowed-origins</code>              | The url addresses of sites that can access notification module API.Multiple values can be provided(e.g. --allowed-origins http://site1.com https://site2.com)       |</p>
+<p>The following options are only available for Windows Builds:
+| Argument                           | Description                                                                                        |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------- |
+| <code>--service-user-password</code>          | The password for the provided service user.                                                        |
+| <code>--integrated-security</code>            | Use integrated security. Only valid for MSSql and provided service user.                           |
+| <code>-t</code> | <code>--install-type</code>           | The type of installation. Can be one of the following values: Service, IISApplication, IISWebSite. |
+| <code>-S</code> | <code>--certificate-store</code>      | The store of the certificate to use for the IIS Website or Windows Service.                        |
+| <code>--cert-allow-invalid</code>             | Allow invalid certificates.                                                                        |
+| <code>-c</code> | <code>--certificate-thumbprint</code> | The thumbprint of the certificate to use for the IIS Website or Windows Service.                   |
+| <code>--set-cert-permission</code>            | Set read permissions for the specified certificate from the store for service-user.                |</p>
+<p>There is also a "setup-silent" script in which you can type in all the information for faster reinstallation at a later point.</p>
+<p><strong>Important:</strong> Adjust the appsettings.json file in the chosen installation path after installation finished so it fits your requirements.</p>
+<h5 id="uninstall">Uninstall</h5>
+<p>If you want to uninstall a Notification Module Installation, just call the setup script with the "uninstall" parameter.</p>
+<h5 id="exit-codes">Exit Codes</h5>
+<p>All exit codes are grouped into the following binary masks:</p>
+<table>
+<thead>
+<tr>
+<th>Mask</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x----01--</code></td>
+<td>General error</td>
+</tr>
+<tr>
+<td><code>0x----02--</code></td>
+<td>Windows service error</td>
+</tr>
+<tr>
+<td><code>0x----03--</code></td>
+<td>IIS App Pool error</td>
+</tr>
+<tr>
+<td><code>0x----04--</code></td>
+<td>IIS Web Site error</td>
+</tr>
+<tr>
+<td><code>0x----05--</code></td>
+<td>IIS Application error</td>
+</tr>
+<tr>
+<td><code>0x----06--</code></td>
+<td>Systemd service error</td>
+</tr>
+<tr>
+<td><code>0x--01----</code></td>
+<td>Invalid prerequisite</td>
+</tr>
+<tr>
+<td><code>0x--02----</code></td>
+<td>Preparation failed</td>
+</tr>
+<tr>
+<td><code>0x--03----</code></td>
+<td>Installation failed</td>
+</tr>
+<tr>
+<td><code>0x--04----</code></td>
+<td>Uninstallation failed</td>
+</tr>
+</tbody>
+</table>
+<p>All possible exit codes that the setup can return:
+| Code (DEC) | Code (HEX)   | Description                                                                |
+| ---------- | ------------ | -------------------------------------------------------------------------- |
+| -1         | <code>0xFFFFFFFF</code> | An unknown error occurred                                                  |
+| 0          | <code>0x00000000</code> | The setup finished without errors                                          |
+| 65792      | <code>0x00010100</code> | A required parameter is missing                                            |
+| 65793      | <code>0x00010101</code> | A parameter value is invalid                                               |
+| 65794      | <code>0x00010102</code> | Retrieving the certificates from the given certificate store failed        |
+| 65795      | <code>0x00010103</code> | A certificate with the given thumbprint was not found in the store         |
+| 65796      | <code>0x00010104</code> | The notification was not found                                             |
+| 65797      | <code>0x00010105</code> | The setup was not executed as Administrator/root                           |
+| 67072      | <code>0x00010600</code> | The installation directory could not be retrieved from the systemd service |
+| 131584     | <code>0x00020200</code> | Starting the Windows service failed                                        |
+| 131585     | <code>0x00020201</code> | Stopping the Windows service failed                                        |
+| 131840     | <code>0x00020300</code> | Starting the IIS App Pool failed                                           |
+| 131841     | <code>0x00020301</code> | Stopping the IIS App Pool failed                                           |
+| 132608     | <code>0x00020600</code> | Starting the systemd service failed                                        |
+| 132609     | <code>0x00020601</code> | Stopping the systemd service failed                                        |
+| 196864     | <code>0x00030100</code> | Copying the Notification Module Binaries failed                            |
+| 196865     | <code>0x00030101</code> | Migrating/Creating the database failed                                     |
+| 196866     | <code>0x00030102</code> | Updating the application settings failed                                   |
+| 197120     | <code>0x00030200</code> | Creating the Windows service failed                                        |
+| 197376     | <code>0x00030300</code> | Creating the IIS App Pool failed                                           |
+| 197632     | <code>0x00030400</code> | Creating the IIS Web Site failed                                           |
+| 197633     | <code>0x00030401</code> | Updating the IIS Web Site failed                                           |
+| 197888     | <code>0x00030500</code> | Creating the IIS Application failed                                        |
+| 197889     | <code>0x00030501</code> | Updating the IIS Application failed                                        |
+| 198144     | <code>0x00030600</code> | Creating the systemd service failed                                        |
+| 198145     | <code>0x00030601</code> | Updating the systemd service failed                                        |
+| 262400     | <code>0x00040100</code> | Removing the Notification Module Binaries failed                           |
+| 262656     | <code>0x00040200</code> | Removing the Windows service failed                                        |
+| 262657     | <code>0x00040201</code> | The Notification Module Windows service was not found                      |
+| 262912     | <code>0x00040300</code> | Removing the IIS App Pool failed                                           |
+| 263168     | <code>0x00040400</code> | Removing the IIS Web Site failed                                           |
+| 263424     | <code>0x00040500</code> | Removing the IIS Application failed                                        |
+| 263680     | <code>0x00040600</code> | Removing the systemd service failed                                        |</p>
+<h4 id="3-access-the-swagger-ui">3. Access the Swagger UI 📊</h4>
+<p>You can find the Swagger UI of the Notification Module under:</p>
+<pre><code>https://{YOUR_CONFIGURED_NOTIFICATION_MODULE_URL}:{PORT}/api/notification/index.html
+</code></pre>
+<h4 id="4-send-events">4. Send events 🪁</h4>
+<p>To be able to send a new event to the Notification Module you must first request a token (JWT). All further requests must include the token.</p>
+<h2 id="architecture-documentation">Architecture Documentation 📚</h2>
+<p>See our <a href="docs/arc42/01.%20Introduction%20and%20Goals.md">architecture documenation</a> based on the <a href="https://arc42.de/">arc42</a> template.</p>
+<h2 id="responsible-team">Responsible Team 👩🏼‍🚀</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nico Graichen</td>
+<td>Product Owner</td>
+</tr>
+<tr>
+<td>Marius Schulze</td>
+<td>Architect / Developer</td>
+</tr>
+<tr>
+<td>Marc Schmidt</td>
+<td>Developer</td>
+</tr>
+<tr>
+<td>Nima Hamidian</td>
+<td>Developer</td>
+</tr>
+<tr>
+<td>Philip Koep</td>
+<td>Developer</td>
+</tr>
+<tr>
+<td>Jens Schmitz</td>
+<td>Developer</td>
+</tr>
+<tr>
+<td>Patrick Pfüller</td>
+<td>Developer</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Processes_WFDesign/" class="btn btn-neutral float-right" title="Workflow design">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Notifications_Installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Notifications_Installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Processes_WFDesign/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
