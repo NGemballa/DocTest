@@ -8,15 +8,15 @@ nav:
   - Knowledge:
     - Create an article: Knowledge_CreateArticle.md
   - Messaging: 
-    - Introduction & Goals: Messaging_Topic1.md
-    - Glossary: Messaging_Topic2.md
+    - Integration: Messaging\integration\support.md
+    - Events: Messaging\events\index.md
   - Notifications:
     - Installation: Notifications_Installation.md
   - Performance:
     - Installation: Performance_Installation.md
   - Processes:
-    - Installation: Processes_Installation.md
-    - Workflow design: Processes_WFDesign.md
+    - Installation: Processes\Processes_Installation.md
+    - Workflow design: Processes\Processes_WFDesign.md
   - Resources:
     - Installation: Resources_Installation.md
 theme: readthedocs

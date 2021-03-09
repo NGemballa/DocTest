@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Webhooks - Serviceware ESP online manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Webhooks";
+    var mkdocs_page_input_path = "Messaging\\integration\\webhooks.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Serviceware ESP online manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Authenticator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Authenticator_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Financial</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../Financial_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Knowledge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../Knowledge_CreateArticle.md">Create an article</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Messaging</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../support/">Integration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../events/">Events</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Notifications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Notifications_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Performance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../Performance_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Processes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Processes/Processes_Installation/">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Processes/Processes_WFDesign/">Workflow design</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../Resources_Installation.md">Installation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Serviceware ESP online manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Webhooks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="webhooks">Webhooks</h1>
+<h2 id="outgoing-webhooks">Outgoing webhooks</h2>
+<p>This feature allows customer's 3rd-party systems to be notified about events happened in smoope via HTTP protocol.</p>
+<h3 id="handling-requests">Handling requests</h3>
+<p>Each time new event registed in smoope it will be send out via HTTP POST request with <code>Content-Type: application/json</code> header and predefined payload to remote url.</p>
+<h3 id="payload">Payload</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>*</td>
+<td>Original event's <a href="#supported-events">type</a></td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>*</td>
+<td>Original event's content</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>*</td>
+<td>Version, currently always set to 2</td>
+</tr>
+<tr>
+<td><code>roomId</code></td>
+<td></td>
+<td>Room's identifier event was posted in</td>
+</tr>
+<tr>
+<td><code>senderId</code></td>
+<td></td>
+<td>Sender's identifier</td>
+</tr>
+<tr>
+<td><code>senderExternalId</code></td>
+<td></td>
+<td>Sender's external identifier</td>
+</tr>
+<tr>
+<td><code>recipients</code></td>
+<td></td>
+<td>Collection of <a href="#recipient">recipients</a></td>
+</tr>
+<tr>
+<td><code>referenceId</code></td>
+<td></td>
+<td>Refererenced event (in case of original event references another)</td>
+</tr>
+<tr>
+<td><code>livechatId</code></td>
+<td></td>
+<td>Livechat's identifier used in conversation</td>
+</tr>
+<tr>
+<td><code>preconditions</code></td>
+<td></td>
+<td>Livechat's preconditions used while creating a conversation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recipient">Recipient</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>*</td>
+<td>Recipient's identifier</td>
+</tr>
+<tr>
+<td><code>externalId</code></td>
+<td></td>
+<td>Recipient's external identifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supported-events">Supported events</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s.room.create</code></td>
+<td>Room was created</td>
+</tr>
+<tr>
+<td><code>s.room.membership</code></td>
+<td>User has joined or left a room</td>
+</tr>
+<tr>
+<td><code>s.message.text</code></td>
+<td>User has created a text message</td>
+</tr>
+<tr>
+<td><code>s.message.media</code></td>
+<td>User has created a media message</td>
+</tr>
+<tr>
+<td><code>s.message.edit</code></td>
+<td>User has edited a message</td>
+</tr>
+<tr>
+<td><code>s.message.delete</code></td>
+<td>User has removed a message</td>
+</tr>
+<tr>
+<td><code>s.room.close</code></td>
+<td>Room was closed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="signature-and-its-verification">Signature and its verification</h3>
+<p>Signature is a string formatted in the way of <code>{timestamp}:{content}</code> and signed with predefined signing key using <a href="https://en.wikipedia.org/wiki/HMAC">HMAC</a> algorithm and SHA-512 as underlying hash function.
+In string above <code>content</code> represents an <a href="#payload">outgoing payload</a>.</p>
+<p>Both signature and timestamp values are served via HTTP headers:</p>
+<p><code>smoope-signature</code> - unique signature allows to verify incoming request at 3rd-party system</p>
+<p><code>smoope-timestamp</code> - <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> formatted string, represents when request was performed</p>
+<p>Signing process is performed on server each time it attempts to request remote url.
+While receiving requests from smoope, 3rd-party system is responsible to verify incoming payloads by performing same signing process at its side and
+comparing result with original signature sent within the request. Same signature means request was not intercepted or changed by other software or persons.</p>
+<h3 id="example">Example</h3>
+<p>The following snippet represents a <a href="https://curl.haxx.se/">curl</a> request which will be sent in case of <code>s.message.text</code> and signed with <code>hmac</code> key:</p>
+<p>{{#docs-snippet name='outgoing-hook.sh' title='Simulating a webhook with curl' language='sh'}}
+curl -X POST  \
+  -H "Content-Type:application/json;charset=UTF-8"  \
+  -H "smoope-timestamp:2019-05-15T12:58:34.758710Z"  \
+  -H "smoope-signature:wT50Do1_-KU1Ga8u6nFuFl_ZPzlXbmg1bLukr5zGdTf5P0E51VHvuq71NUXVe-m6P9HgW58WL8_T2F5BX-wZPg"  \
+  -d '{"senderId":"sender","type":"s.message.text","version":1,"content":{"body":"ho-ho"},"roomId":"room","livechatId":"livechat"}' \ 
+  "http://some.org/webhook"
+{{/docs-snippet}}</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

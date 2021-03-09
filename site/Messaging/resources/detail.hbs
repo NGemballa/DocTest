@@ -1,0 +1,106 @@
+{{outlet}}
+
+<h1 class='docs-h1' data-test-class-name>
+  {{model.type.name}}
+</h1>
+
+{{#if model.comment}}
+    <div data-test-class-description>{{{model.comment}}}</div>
+{{/if}}
+
+<div data-test-item class="docs-pb-8">
+    <h3 id="type" data-text="type" class="docs-h3 docs-font-mono docs-font-normal">
+        <a href="#type" class="heading-anchor">
+            <em>type</em> <strong>{{model.resourceType}}</strong>
+        </a>
+    </h3>
+
+  {{#if (has-keys model.attributes)}}
+      <h3 id="attributes" data-text="attributes" class="docs-h3">
+          <a href="#attributes" class="heading-anchor">Attributes</a>
+      </h3>
+    {{#api/x-meta-panel as |panel|}}
+        <div class="attrs">
+          {{#each attributes as |attr|}}
+              <div class="attr">
+                  <div class="attr__aside">
+                      <span class="docs-font-mono docs-font-bold docs-pr-2">{{attr.name}}</span>
+                    {{type-link class='attr__type' type=attr.def.type}}
+                  </div>
+                  <div class="attr__body">
+                    {{attr-flags attr=attr}}
+                      <div class="attr__comment">{{{attr.def.comment}}}</div>
+                  </div>
+              </div>
+          {{/each}}
+        </div>
+    {{/api/x-meta-panel}}
+  {{/if}}
+
+  {{#if (has-keys model.relationships)}}
+      <h3 id="relationships" data-text="relationships" class="docs-h3">
+          <a href="#relationships" class="heading-anchor">Relationships</a>
+      </h3>
+    {{#api/x-meta-panel as |panel|}}
+        <div class="attrs">
+          {{#each relationships as |rel|}}
+              <div class="attr">
+                  <div class="attr__aside">
+                      <span class="docs-font-mono docs-font-bold docs-pr-2">{{rel.name}}</span>
+                    {{type-link class='attr__type' type=rel.def.type}}
+                  </div>
+                  <div class="attr__body">
+                    {{attr-flags attr=rel}}
+                      <div class="attr__comment">{{{rel.def.comment}}}</div>
+                  </div>
+              </div>
+          {{/each}}
+        </div>
+    {{/api/x-meta-panel}}
+  {{/if}}
+
+  {{#if (has-keys model.links)}}
+    <h3 id="links" data-text="links" class="docs-h3">
+      <a href="#links" class="heading-anchor">Links</a>
+    </h3>
+    {{#api/x-meta-panel as |panel|}}
+      <div class="attrs">
+        {{#each links as |link|}}
+          <div class="attr">
+            <div class="attr__aside">
+              <span class="docs-font-mono docs-font-bold docs-pr-2">{{link.name}}</span>
+              {{type-link class='attr__type' type=link.def.type}}
+            </div>
+            <div class="attr__body">
+              {{attr-flags attr=link}}
+              <div class="attr__comment">{{{link.def.comment}}}</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/api/x-meta-panel}}
+  {{/if}}
+
+  {{#if (has-keys model.metaAttributes)}}
+      <h3 id="meta" data-text="meta" class="docs-h3">
+          <a href="#meta" class="heading-anchor">Meta</a>
+      </h3>
+    {{#api/x-meta-panel as |panel|}}
+        <div class="attrs">
+          {{#each meta as |attr|}}
+              <div class="attr">
+                  <div class="attr__aside">
+                      <span class="docs-font-mono docs-font-bold docs-pr-2">{{attr.name}}</span>
+                    {{type-link class='attr__type' type=attr.def.type}}
+                  </div>
+                  <div class="attr__body">
+                    {{attr-flags attr=attr}}
+                      <div class="attr__comment">{{{attr.def.comment}}}</div>
+                  </div>
+              </div>
+          {{/each}}
+        </div>
+    {{/api/x-meta-panel}}
+  {{/if}}
+</div>
+

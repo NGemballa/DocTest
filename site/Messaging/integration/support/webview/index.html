@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../../img/favicon.ico">
+  <title>Support livechat in a webview - Serviceware ESP online manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Support livechat in a webview";
+    var mkdocs_page_input_path = "Messaging\\integration\\support\\webview.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Serviceware ESP online manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Authenticator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../Authenticator_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Financial</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../../Financial_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Knowledge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../../Knowledge_CreateArticle.md">Create an article</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Messaging</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../">Integration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../events/">Events</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Notifications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../Notifications_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Performance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../../Performance_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Processes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../Processes/Processes_Installation/">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../Processes/Processes_WFDesign/">Workflow design</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../../Resources_Installation.md">Installation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Serviceware ESP online manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Support livechat in a webview</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="support-livechat-in-a-webview">Support livechat in a webview</h1>
+<p>The support integration in a webview happens by opening the <code>WebView</code> with a preconfigured url.
+This will automatically create a support conversation when loaded.</p>
+<p>{{docs-snippet name='support/integration/url.js' title='Livechat URL structure' language='js'}}</p>
+<p>To configure the instance, you can provide preconditions, language and other options as query parameters.
+The complex values have to be stringified and url encoded.
+For example to pass the preconditions <code>{"foo": "bar"}</code>, append a query parameter <code>preconditions=%7B%22foo%22%3A%22bar%22%7D</code>. </p>
+<p>The supported query parameters are <code>preconditions</code>, <code>language</code> and <code>options</code></p>
+<p>{{docs-snippet name='support/integration/building-url.js' title='Example code to build a embeddable chat url in JavaScript' language='js'}}</p>
+<p>If the livechat is embedded via url, we emit the following events using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">postMessage</a> API.
+Messages are serialized as JSON objects.</p>
+<p>{{#docs-demo as |demo|}}
+  {{demo.snippet name='support/integration/message-event-data.ts' language='ts' label="Message"}}
+  {{demo.snippet name='support/integration/ReadyToSupportData.ts' language='ts' label="ReadyToSupport"}}
+  {{demo.snippet name='support/integration/CapturedLinkData.ts' language='ts' label="CapturedLink"}}
+  {{demo.snippet name='support/integration/RoomClosedData.ts' language='ts' label="RoomClosed"}}
+  {{demo.snippet name='support/integration/SupportRequestRejectedData.ts' language='ts' label="SupportRequestRejected"}}
+  {{demo.snippet name='support/integration/RequestTokenData.ts' language='ts' label="RequestToken"}}
+{{/docs-demo}}</p>
+<p>We emit the following types via <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">postMessage</a>.</p>
+<ul>
+<li><code>ReadyToSupport</code>, if the chat is initialized far enough to accept support input from the user</li>
+<li><code>CapturedLink</code>, if the <code>captureLinks</code> option is enabled with <code>{url: string}</code> as event payload</li>
+<li><code>RoomClosed</code>, if the current support room is closed </li>
+<li><code>SupportRequestRejected</code>, if the current support request got rejected</li>
+<li><code>RequestTokenData</code>, if the provided token became invalid</li>
+</ul>
+<p>Due to missing bridge between JavaScript and Android/iOS, we have to write some custom code to listen for emitted events. (See "Android Setup" and "iOS Setup")</p>
+<h2 id="android-setup">Android Setup</h2>
+<p>In Android, you have to define a JavaScript interface to inject into the <a href="https://developer.android.com/reference/android/webkit/WebView">WebView</a>.</p>
+<p>{{#docs-demo as |demo|}}
+  {{demo.snippet name='support/integration/ipc-android.kt' language='kotlin' label="Kotlin"}}
+  {{demo.snippet name='support/integration/ipc-android.java' language='java' label="Java"}}
+{{/docs-demo}}</p>
+<p>Using the <a href="https://developer.android.com/reference/android/webkit/WebView#addJavascriptInterface(java.lang.Object,%20java.lang.String)">addJavascriptInterface</a>, register your <code>Interface</code> as <code>SMOOPE_IPC</code>.
+This allows us to call your Interface, if defined.</p>
+<p>{{#docs-demo as |demo|}}
+  {{demo.snippet name='support/integration/webview-setup-android.kt' language='kotlin' label="Kotlin"}}
+  {{demo.snippet name='support/integration/webview-setup-android.java' language='java' label="Java"}}
+{{/docs-demo}}</p>
+<aside>
+
+**File upload**
+
+If you want to allow the user to select a file, you have to make some adjustments.
+First [set](https://developer.android.com/reference/android/webkit/WebView.html#setWebChromeClient(android.webkit.WebChromeClient)) a [`WebChromeClient`](https://developer.android.com/reference/android/webkit/WebChromeClient) on the `WebView` instance.
+
+Next you can implement the [`onShowFileChooser`](https://developer.android.com/reference/android/webkit/WebChromeClient#onShowFileChooser(android.webkit.WebView,%2520android.webkit.ValueCallback%3Candroid.net.Uri%5B%5D%3E,%2520android.webkit.WebChromeClient.FileChooserParams)) to fit your use-case.
+
+</aside>
+
+<h2 id="ios-setup">iOS Setup</h2>
+<p>Similar to Android, in iOS, you have to register a listener for a custom <code>messageHandler</code> method on a <a href="https://developer.apple.com/documentation/webkit/wkwebview">WKWebView</a>.
+Use the <code>SMOOPE_IPC</code> name to add to the <code>WKUserContentController</code>.</p>
+<p>Setup the WKWebView to receive livechat events:</p>
+<p>{{#docs-demo as |demo|}}
+  {{demo.snippet name='support/integration/webview-setup-ios.swift' language='swift' label="Swift"}}
+  {{demo.snippet name='support/integration/webview-setup-ios.m' language='obj-c' label="Objective-C"}}
+{{/docs-demo}}</p>
+<p>Listen for messages with the <code>SMOOPE_IPC</code> name:</p>
+<p>{{#docs-demo as |demo|}}
+  {{demo.snippet name='support/integration/ipc-ios.swift' language='swift' label="Swift"}}
+  {{demo.snippet name='support/integration/ipc-ios.m' language='obj-c' label="Objective-C"}}
+{{/docs-demo}}</p>
+<h3 id="opening-external-links">Opening external links</h3>
+<p>If you want to allow the livechat to open external links, you have to make additional adjustments.
+The following snippets allows the webview to open external links by intercepting navigation actions.</p>
+<p>{{#docs-demo as |demo|}}
+  {{demo.snippet name='support/integration/external-links-ios.swift' language='swift' label="Swift"}}
+  {{demo.snippet name='support/integration/external-links-ios.m' language='obj-c' label="Objective-C"}}
+{{/docs-demo}}</p>
+<h2 id="authenticating-a-user">Authenticating a user</h2>
+<p>In cases where you have an authenticated user and want to pass its identity to our system, you can do that by configuring the <code>token</code> query parameter.
+Simply append the parameter to your existing WebView url and load the chat.</p>
+<p>The livechat will use that token to create request against our api.
+If the provided token expires, the chat emits a <code>RequestToken</code> event which allows you to refresh the token.</p>
+<p>To do that, post a web message, using the <code>RequestTokenResponse</code> event data:</p>
+<p>{{#docs-demo as |demo|}}
+  {{demo.snippet name='support/integration/token-response.kt' language='kotlin' label="Kotlin"}}
+  {{demo.snippet name='support/integration/token-response.java' language='java' label="Java"}}
+  {{demo.snippet name='support/integration/RequestTokenResponseData.ts' language='ts' label="RequestTokenResponse type"}}
+{{/docs-demo}}</p>
+<h3 id="posting-a-message-from-ios">Posting a message from iOS</h3>
+<p>Because iOS exposes no way to communicate from iOS context to the <a href="https://developer.apple.com/documentation/webkit/wkwebview">WKWebview</a> context, you have to make additional adjustments.</p>
+<p>If the app is launched inside a WKWebview, we register a global <code>wkSmoopePostMessage</code> method. 
+This allows you to use the <a href="https://developer.apple.com/documentation/webkit/wkwebview/1415017-evaluatejavascript">evaluateJavaScript</a> method, to emit data to the chat.</p>
+<p>The method accepts a JSON-Object which contains the message information.</p>
+<p>{{docs-snippet name='support/integration/token-response.swift' title='Responding to a token request with a new token' language='swift'}}</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

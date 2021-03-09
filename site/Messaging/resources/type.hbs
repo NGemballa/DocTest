@@ -1,0 +1,46 @@
+{{outlet}}
+
+<h1 class='docs-h1' data-test-class-name>
+  {{model.type.name}}
+</h1>
+
+<h3 id="type" data-text="type" class="docs-h3 docs-font-mono docs-font-normal">
+    <a href="#type" class="heading-anchor">
+      {{#if model.type.clazz}}
+          <em>{{model.type.clazz}}</em>&lt;<strong>{{model.type.name}}</strong>&gt;
+      {{else}}
+        {{model.type.name}}
+      {{/if}}
+    </a>
+</h3>
+
+{{#if model.comment}}
+    <div data-test-class-description>{{{model.comment}}}</div>
+{{/if}}
+
+<div data-test-item class="docs-pb-8">
+  {{#if (has-keys model.attributes)}}
+      <h3 id="attributes" data-text="attributes" class="docs-h3">
+          <a href="#attributes" class="heading-anchor">Attributes</a>
+      </h3>
+    {{#api/x-meta-panel as |panel|}}
+        <div class="attrs">
+          {{#each-in model.attributes as |name attribute|}}
+              <div class="attr">
+                  <div class="attr__aside">
+                      <span class="docs-font-mono docs-font-bold docs-pr-2">{{name}}</span>
+                      <div class="attr__type">
+                          <div class="var-type">{{attribute.type.name}}</div>
+                      </div>
+                  </div>
+                  <div class="attr__body">
+                    {{attr-flags attr=attrbute}}
+                      <div class="attr__comment">{{{attribute.comment}}}</div>
+                  </div>
+              </div>
+          {{/each-in}}
+        </div>
+    {{/api/x-meta-panel}}
+  {{/if}}
+</div>
+

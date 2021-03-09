@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Support Livechat - Serviceware ESP online manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Support Livechat";
+    var mkdocs_page_input_path = "Messaging\\livechat.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Serviceware ESP online manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Authenticator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Authenticator_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Financial</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../Financial_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Knowledge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../Knowledge_CreateArticle.md">Create an article</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Messaging</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../integration/support/">Integration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../events/">Events</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Notifications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Notifications_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Performance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../Performance_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Processes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Processes/Processes_Installation/">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Processes/Processes_WFDesign/">Workflow design</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../Resources_Installation.md">Installation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Serviceware ESP online manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Support Livechat</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="support-livechat">Support Livechat</h1>
+<p>The livechat is the component that allows customers to communicate with support operators.
+Before embedding the livechat, make sure that you receive your <code>livechat-id</code> and <code>tenant-id</code> from our support.</p>
+<p>We provide two ways to embed a livechat.
+Both accept configuration options, language configuration and preconditions. </p>
+<h2 id="options">Options</h2>
+<p>A livechat instance has various <code>options</code> to control its behavior:</p>
+<ul>
+<li><code>captureLinks: boolean</code> - a click on any link in the chat history will prevent transition and emit a <code>CapturedLink</code> event </li>
+</ul>
+<h2 id="programmatic-livechat-creation">Programmatic livechat creation</h2>
+<p>The livechat can be initialized via JavaScript.
+This is the preferred way if you're planning to use smoope as a support chat on your website.</p>
+<blockquote>
+<p>To add a livechat to a regular HTML page, you have to first load the embeddable JavaScript file.</p>
+</blockquote>
+<pre><code class="language-html">&lt;script async defer src=&quot;https://&lt;tenantId&gt;-chat.smoope.net/embed.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<blockquote>
+<p>As the snippet uses <code>async defer</code> to prevent blocking your own JavaScript, 
+you have to wait for the window to be loaded before initializing the livechat.</p>
+</blockquote>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
+window.addEventListener('load', function () {
+    // Initialize a livechat instance (Note: this doesn't start/insert it into DOM).
+    var chat = new smoopeChat.default(document.querySelector('#chat'), {
+    livechat: '&lt;livechat-id&gt;',
+    language: 'fr',
+    preconditions: {
+      language: 'fr',
+      zip: '1845'
+    },
+    });
+
+    // Insert livechat instance into DOM.
+    chat.insert();
+});
+&lt;/script&gt;
+</code></pre>
+<p>Once the chat is inserted, smoope will automatically show a button to let the user request support if possible.
+The returned <code>chat</code> instance acts as an event emitter.</p>
+<p>Exposed events:</p>
+<ul>
+<li><code>captureLinks</code>, if the <code>captureLinks</code> option is enabled with <code>{url: string}</code> as event payload</li>
+</ul>
+<blockquote>
+<p>Example on how to capture link clicks</p>
+</blockquote>
+<pre><code class="language-js">var chat = new smoopeChat.default(document.querySelector('#chat'), {
+  // ... other options
+  captureLinks: true
+});
+chat.on(&quot;capturedLink&quot;, function(data) {
+  alert(`user clicked a link: ${data.url}`);
+});
+</code></pre>
+<h2 id="automatic-livechat-creation-via-url">Automatic livechat creation via URL</h2>
+<p>If you can't execute JavaScript in your App, you can easily embed the livechat by using a Webview.</p>
+<pre><code class="language-js">`http://${tenantId}-chat.smoope.net/${livechatId}`
+</code></pre>
+<p>To configure the instance, you can provide preconditions, language and other options as query parameters.
+The complex values have to be stringified and url encoded.
+For example to pass the preconditions <code>{"foo": "bar"}</code>, append a query parameter <code>preconditions=%7B%22foo%22%3A%22bar%22%7D</code>. </p>
+<p>The supported query parameters are <code>preconditions</code>, <code>language</code> and <code>options</code></p>
+<blockquote>
+<p>Example code to build a embeddable chat url in JavaScript</p>
+</blockquote>
+<pre><code class="language-js">const language = 'fr';
+const preconditions = encodeURIComponent(JSON.stringify({
+  language,
+  zip: '1845'
+}));
+const options = encodeURIComponent(JSON.stringify({
+  captureLinks: true
+}));
+
+const url = `http://${tenantId}-chat.smoope.net/${livechatId}` + 
+  `?language=${language}` + 
+  `&amp;preconditions=${preconditions}` +
+  `&amp;options=${options}`;
+</code></pre>
+<p>If the livechat is embedded via url, we emit the following events using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">postMessage</a> API.
+Messages are serialized as JSON objects.</p>
+<p>Due to missing bridge between JavaScript and Android/iOS, we have to write some custom code to listen for emitted events. (See "Handling events in Android" and "Handling events in iOS")</p>
+<blockquote>
+<p>MessageEvent data type</p>
+</blockquote>
+<pre><code class="language-ts">type MessageEventData = {
+  type: string, 
+  data: Object, 
+  _by: 'smoope',
+};
+
+// Example MessageEvent 
+// {&quot;type&quot;:&quot;ReadyToSupport&quot;,&quot;data&quot;:{&quot;room&quot;:&quot;01CXWBKT6Q6YCV1X12FNSJ0QDR&quot;},&quot;_by&quot;:&quot;smoope&quot;}
+</code></pre>
+<p>We emit the following types via <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">postMessage</a>.</p>
+<ul>
+<li><code>CapturedLink</code>, if the <code>captureLinks</code> option is enabled with <code>{url: string}</code> as event payload</li>
+<li><code>ReadyToSupport</code>, if the chat is initialized far enough to accept support input from the user</li>
+<li><code>RoomClosed</code>, if the current support room is closed </li>
+<li><code>SupportRequestRejected</code>, if the current support request got rejected</li>
+</ul>
+<h2 id="listening-for-events-in-android">Listening for events in Android</h2>
+<p>In Android, you have to define a JavaScript interface to inject into the <a href="https://developer.android.com/reference/android/webkit/WebView">WebView</a>.</p>
+<p>Using the <a href="https://developer.android.com/reference/android/webkit/WebView#addJavascriptInterface(java.lang.Object,%20java.lang.String)">addJavascriptInterface</a>, register your <code>Interface</code> as <code>SMOOPE_IPC</code>.
+This allows us to call your Interface, if defined.</p>
+<blockquote>
+<p>Custom JavaScript interface to add to the webview</p>
+</blockquote>
+<pre><code class="language-java">class dummy.app.snippets.support.integration.SmoopeIpc {
+  @JavascriptInterface
+  public void postMessage(String data, String origin) {
+    // handle livechat event
+    System.out.println(&quot;Smoope chat emitted data: &quot; + data + &quot; &quot; + origin);
+  }
+}
+</code></pre>
+<blockquote>
+<p>Enable JavaScript and register your interface as <code>SMOOPE_IPC</code></p>
+</blockquote>
+<pre><code class="language-java">webView.getSettings().setJavaScriptEnabled(true);
+webView.addJavascriptInterface(new dummy.app.snippets.support.integration.SmoopeIpc(), &quot;SMOOPE_IPC&quot;);
+webView.loadUrl(&quot;&lt;webchat-url&gt;&quot;);
+</code></pre>
+<h2 id="listening-for-events-in-ios">Listening for events in iOS</h2>
+<p>Similar to Android, in iOS, you have to register a listener for a custom <code>messageHandler</code> method on a <a href="https://developer.apple.com/documentation/webkit/wkwebview">WKWebView</a>.
+Use the <code>SMOOPE_IPC</code> name to add to the <code>WKUserContentController</code>.</p>
+<blockquote>
+<p>Setup the WKWebView to receive livechat events</p>
+</blockquote>
+<pre><code class="language-swift">let config = WKWebViewConfiguration()
+config.preferences.javaScriptEnabled = true
+let userContentController = WKUserContentController()
+userContentController.add(self, name: &quot;SMOOPE_IPC&quot;)
+config.userContentController = userContentController
+
+webView.load(URLRequest(url: URL(string: &quot;&lt;webchat-url&gt;&quot;)!))
+</code></pre>
+<blockquote>
+<p>Listen for messages with the <code>SMOOPE_IPC</code> name</p>
+</blockquote>
+<pre><code class="language-swift">extension ViewController: WKScriptMessageHandler {
+  func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    if message.name == &quot;SMOOPE_IPC&quot;, let messageBody = message.body as? String {
+      // handle livechat event
+      print(messageBody)
+    }
+  }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

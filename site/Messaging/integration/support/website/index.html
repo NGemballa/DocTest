@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../../img/favicon.ico">
+  <title>Support livechat in a website - Serviceware ESP online manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Support livechat in a website";
+    var mkdocs_page_input_path = "Messaging\\integration\\support\\website.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Serviceware ESP online manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Authenticator</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../Authenticator_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Financial</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../../Financial_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Knowledge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../../Knowledge_CreateArticle.md">Create an article</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Messaging</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../">Integration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../events/">Events</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Notifications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../Notifications_Installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Performance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../../Performance_Installation.md">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Processes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../Processes/Processes_Installation/">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../Processes/Processes_WFDesign/">Workflow design</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../../../../Resources_Installation.md">Installation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Serviceware ESP online manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Support livechat in a website</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="support-livechat-in-a-website">Support livechat in a website</h1>
+<p>The support integration in a regular website happens by including a script from our server.</p>
+<h2 id="bootstrapping-the-livechat">Bootstrapping the livechat</h2>
+<p>The livechat can be initialized via JavaScript.
+This is the preferred way if you're planning to use smoope as a support chat on your website.</p>
+<p>To add a livechat to a regular HTML page, you have to first load the embeddable JavaScript file.</p>
+<p>{{#docs-snippet name='your-snippet-name.hbs' title="Loading the embed script"}}</p>
+<script async defer src="https://<tenantId>-chat.smoope.net/embed.js"></script>
+<p>{{/docs-snippet}}</p>
+<p>As the snippet uses <code>async defer</code> to prevent blocking your own JavaScript, 
+you have to wait for the window to be loaded before initializing the livechat.</p>
+<p>To do this, copy the following snippet, which starts the chat in the most straightforward way.</p>
+<p>{{docs-snippet name='support/integration/embed-snippet.html' title='Example on how to setup the chat' language='html'}}</p>
+<p>Once the chat is inserted, smoope will automatically show a button to let the user request support if possible.</p>
+<aside>
+
+**Chat visibility**
+
+Depending on your livechat configuration, the button will only appear in some cases, e.g. if a matching operator is available.
+
+</aside>
+
+<h2 id="options">Options</h2>
+<p>The chat initialization has the following constructor signature:</p>
+<p>{{#docs-demo as |demo|}}
+  {{demo.snippet name='support/integration/chat-interface.ts' language='ts' label="Chat constructor"}}
+  {{demo.snippet name='support/integration/chat-options.ts' language='ts' label="LiveChatOptions"}}
+{{/docs-demo}}</p>
+<p>This means to construct the chat you have to pass in:</p>
+<ul>
+<li><code>parent: HTMLElement</code> - the element that the chat appends itself to</li>
+<li><code>options: LiveChatOptions</code> - (optional) the options that configure the chat, as mentioned above</li>
+</ul>
+<p>The instance can be configured by setting the <code>options</code> object. 
+You can adjust the following fields:</p>
+<ul>
+<li><code>livechat: string</code> - the livechat id</li>
+<li><code>captureLinks: boolean</code> - (optional) a click on any link in the chat history will prevent transition and emit a <code>CapturedLink</code> event</li>
+<li><code>preconditions: object</code> - (optional) an object that is used to improve operator routing. If you don't use any special routing logic, you shouldn't have to set it </li>
+<li><code>language: string</code> - (optional) a hint that influences the language, the system is using, for the support user. </li>
+</ul>
+<h2 id="listening-for-events">Listening for events</h2>
+<p>The returned <code>chat</code> instance acts as an event emitter and emits various informations to your website.
+The following events are observable from your website:</p>
+<ul>
+<li><code>captureLinks</code>, if the <code>captureLinks</code> option is enabled with <code>{url: string}</code> as event payload</li>
+</ul>
+<p>{{#docs-snippet name='listen-events.js' title='Example on how to capture link clicks' language='js'}}
+var chat = new smoopeChat.default(document.querySelector('#chat'), {
+  // ... other options
+  captureLinks: true
+});
+chat.on("capturedLink", function(data) {
+  alert(<code>user clicked a link: ${data.url}</code>);
+});
+{{/docs-snippet}}</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
