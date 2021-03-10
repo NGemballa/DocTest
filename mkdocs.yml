@@ -17,6 +17,7 @@ nav:
   - Processes:
     - Installation: Processes\Processes_Installation.md
     - Workflow design: Processes\Processes_WFDesign.md
+    - Credits: Processes\Processes_Credits.md
   - Resources:
     - Installation: Resources_Installation.md
 theme: readthedocs
